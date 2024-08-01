@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 :root {
-    /* Colors */
     --brand-color: hsl(46, 100%, 50%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
-    /* Fonts */
     --font-title: "Montserrat", sans-serif;
     --font-text: "Lato", sans-serif;
   }
@@ -20,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #015153; /* Background color of the scrollbar track */
+    background: #015153;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -28,15 +26,14 @@
     border-radius: 10px; 
     border: 2px solid #7c7a7a; 
 }
-/* Optional: styling for scrollbar buttons */
+
 ::-webkit-scrollbar-button {
     background-color: #04999e; 
 }
 
 html,
 body {
-    /* height: 100%;
-    width: 100%; */
+   
     color: #fff;
     background: #000;
     margin: 0;
@@ -103,7 +100,7 @@ html {
     }
 }
 
-/* Base styles */
+
 nav {
     position: fixed;
     top: 0;
@@ -306,7 +303,6 @@ nav.blur-background {
     }
 }
 
-/* Base styles */
 .container {
     margin-top: 5%;
     width: 100%;
@@ -333,6 +329,7 @@ h3 {
 .box p {
     font-size: 18px;
     color: #ffffff;
+    
 }
 
 .box img {
@@ -378,7 +375,6 @@ h3 {
     margin-left: 10px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
     .container {
         flex-direction: column;
@@ -503,14 +499,11 @@ h3 {
 #ko{
     width: 70%;
     height: 1px;
-    /* margin: 0; */
 }
 .parent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     gap: 20px;
-    /* Adjust the gap between columns as needed */
     width: 85%;
     height: 100%;
     margin: auto;
@@ -533,13 +526,13 @@ h3 {
     font-size: 22px;
     font-weight: 200;
     margin-left: 30px;
+    
 }
 
 
 @media (max-width: 768px) {
     .parent {
         grid-template-columns: 1fr;
-        /* Stack columns on smaller screens */
         width: 100%;
         height: 100%;
     }
@@ -552,7 +545,6 @@ h3 {
    
 }
 
-/* Custom styles for progress bars if needed */
 .progress-bar-wrap {
     background-color: #f3f3f3;
     border-radius: 5px;
@@ -652,8 +644,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-   height:180vh; /* Changed from 170vh to auto */
+   height:180vh;
     padding: 2rem 1rem;
   }
   
@@ -697,7 +688,7 @@ h3 {
     display: grid;
     place-items: center;
     width: 100%;
-    height: 450px; /* Fixed height for the card */
+    height: 450px;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
@@ -720,7 +711,7 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     align-self: flex-end;
-    height: auto; /* Adjust the content height */
+    height: auto; 
     padding: 13% 3.25rem 2.875rem;
     background: linear-gradient(
       180deg,
@@ -763,7 +754,7 @@ h3 {
   .card__button {
     padding: 0.75em 1.6em;
     width: fit-content;
-    width: -moz-fit-content; /* Prefijo necesario para Firefox */
+    width: -moz-fit-content;
     font-variant: small-caps;
     font-weight: bold;
     border-radius: 0.45em;
@@ -919,12 +910,12 @@ h3 {
 
  
 #contact {
-    height: 70vh; /* Fixed height */
+    height: 70vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
-    overflow: hidden; /* Hide overflow if content exceeds fixed height */
+    overflow: hidden; 
 }
 
 .contact-container {
@@ -933,7 +924,7 @@ h3 {
     display: flex;
     gap: 20px;
     padding: 20px;
-    flex-direction: column; /* Stack items vertically by default */
+    flex-direction: column; 
 }
 
 .contact-left, .contact-right {
@@ -981,29 +972,29 @@ h3 {
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    align-self: start; /* Align button to the start */
+    align-self: start; 
 }
 
 .contact-button:hover {
     background-color: #047386;
 }
 
-/* Responsive Design */
+
 @media (min-width: 769px) {
     .contact-container {
-        flex-direction: row; /* Stack items horizontally for larger screens */
+        flex-direction: row; 
     }
 
     .contact-left, .contact-right {
         flex: 1;
-        min-width: 50%; /* Ensure each side takes up 50% of the container */
+        min-width: 50%; 
     }
 }
 
 @media (max-width: 768px) {
     #contact {
-        height: 108vh; /* Allow height to adjust for smaller screens */
-        padding: 0px 0; /* Add padding for smaller screens */
+        height: 108vh; 
+        padding: 0px 0;
         margin-top: 90px;
     }
 #contactChatButton{
@@ -1011,7 +1002,7 @@ h3 {
 }
     .contact-container {
         align-items: center;
-        text-align: center; /* Center text for smaller screens */
+        text-align: center;
         margin-bottom: 62px;
     }
 
@@ -1045,7 +1036,7 @@ h3 {
     #contact {
         height: 150vh;
         margin-top: 990px;
-        padding: 20px 0; /* Add padding for smaller screens */
+        padding: 20px 0; 
         
     }
     #contactChatButton{

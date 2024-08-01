@@ -72,12 +72,10 @@
         document.getElementById('izml').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Get input values
             var fullName = document.getElementById('fullName').value;
             var email = document.getElementById('email').value;
             var message = document.getElementById('message').value;
             
-            // Check if all fields are filled
             if (fullName === '' || email === '' || message === '') {
                 alert('Please fill in all the fields.');
             } else {

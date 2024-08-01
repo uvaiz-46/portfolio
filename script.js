@@ -1,4 +1,3 @@
-// Create and style the custom cursor
 const cursor = document.createElement('div');
 cursor.id = 'cursor';
 document.body.appendChild(cursor);
@@ -14,7 +13,6 @@ cursor.style.transition = 'transform 0.1s ease, width 0.1s ease, height 0.1s eas
 cursor.style.transform = 'translate(-50%, -50%)';
 cursor.style.opacity = '1';
 
-// Update cursor position
 document.addEventListener('mousemove', e => {
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top = `${e.clientY}px`;
@@ -23,24 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li');
-    const content = document.querySelector('.content'); // Assuming the rest of your content has a class of 'content'
+    const content = document.querySelector('.content'); 
     const navbar = document.querySelector('nav');
 
-    // Toggle navigation links on hamburger click
+    
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('show');
-        content.classList.toggle('blur-background'); // Toggle blur on the content
+        content.classList.toggle('blur-background'); 
     });
 
-    // Hide navigation links on link click
+   
     links.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('show');
-            content.classList.remove('blur-background'); // Remove blur from the content
+            content.classList.remove('blur-background');
         });
     });
 
-    // GSAP animation for the navbar hiding and showing on scroll
+    
     let lastScrollTop = 0;
 
     window.addEventListener('scroll', function() {
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (scrollTop > lastScrollTop) {
             gsap.to(navbar, { top: "-100px", duration: 0.3, onComplete: () => {
                 navbar.classList.add('blur');
-                content.classList.remove('blur-background'); // Ensure background is not blurred when scrolling down
+                content.classList.remove('blur-background');
             }});
         } else {
             gsap.to(navbar, { top: "0px", duration: 0.3, onComplete: () => {
@@ -58,16 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
-    // Show navbar when mouse is near the top of the screen
+   
     document.addEventListener('mousemove', function(event) {
         if (event.clientY < 50) {
             gsap.to(navbar, { top: "0px", duration: 0.3 });
-            navbar.classList.add('blur-background'); // Add blur to the navbar background
+            navbar.classList.add('blur-background'); 
         }
     });
 });
 
-// Handle hover events for navigation items
+
 let navi = document.querySelectorAll("ul li ");
 navi.forEach(item => {
     item.addEventListener("mouseover", () => {
@@ -126,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
         duration:1,
         scale:3,
         opavcity:0,
-        // x:100
+       
 
     })
     setTimeout(() => {
@@ -134,11 +132,11 @@ document.addEventListener("DOMContentLoaded", function() {
         loader.style.opacity = '0';
         setTimeout(() => {
             loader.style.display = 'none';
-        }, 500); // match the duration of the opacity transition
-    }, 3000); // 5 seconds
+        }, 500);
+    }, 3000);
 });
 
-// Handle hover events for other elements
+
 const elementsToHover = document.querySelectorAll('a, input');
 elementsToHover.forEach(elem => {
     elem.addEventListener('mouseover', () => {
@@ -154,7 +152,7 @@ elementsToHover.forEach(elem => {
     });
 });
 
-// Handle hover events for text elements
+
 const textElements = document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6');
 textElements.forEach(elem => {
     elem.addEventListener('mouseover', () => {
@@ -169,7 +167,7 @@ textElements.forEach(elem => {
     });
 });
 
-// Cursor trail effect
+
 let cursorTrailTimeout;
 document.addEventListener('mousemove', () => {
     clearTimeout(cursorTrailTimeout);
@@ -183,23 +181,21 @@ document.addEventListener('mousemove', () => {
 gsap.from("nav ul li", {
     duration: 0.5,
     y: -200,
-    // x:100,
     stagger: 0.6,
     ease: "bounce"
 });
 
 gsap.registerPlugin(TextPlugin);
 
-// Get the title element
+
 const titleElement = document.querySelector('.title');
 
-// Set the text to be typed out
+
 const textToType = "Web Developer.";
 
-// Create a timeline for the typewriter effect
 const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.3 });
 
-// Typewriter effect animation
+
 tl.to(titleElement, {
     duration: 2,
     text: {
@@ -284,8 +280,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     chatButton.addEventListener('click', function() {
         alert("Let's Chat button clicked! Feel free to reach out to us with your project ideas.");
-        // Here you can add any additional functionality you want when the button is clicked,
-        // such as opening a contact form, redirecting to a contact page, etc.
+        
+        
     });
 });
 
