@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="recp.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/loogo.png" alt="logo">
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars open-icon"></i>
+            <i class="fas fa-times close-icon" style="display: none;"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html "><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/index.html "><i class="fas fa-laptop-code"></i> Skills</a></li>
+            <li><a href="/index.html "><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="/index.html "><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="/index.html "><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    <br><br><br>
+    <div class="contact_us">
+        <div class="responsive-container-block bigContainer">
+            <div class="responsive-container-block Container">
+                <div class="responsive-cell-block wk-desk-5 wk-ipadp-4 wk-tab-12 wk-mobile-12">
+                    <img class="mainImg" src="/images/me.jpg">
+                </div>
+                <div class="responsive-cell-block wk-desk-7 wk-ipadp-8 wk-tab-12 wk-mobile-12">
+                    <p class="text-blk heading">
+                        Contact Me
+                    </p>
+                    <form class="formTable" id="izml">
+                        <div class="firstRow">
+                            <div class="fullNameArea">
+                                <p class="cardHead">
+                                    Full Name
+                                </p>
+                                <input class="fullName" id="fullName" name="fullName" type="text">
+                            </div>
+                            <div class="emailArea">
+                                <p class="cardHead">
+                                    Email Address
+                                </p>
+                                <input class="email" id="email" name="email" type="text">
+                            </div>
+                        </div>
+                        <div class="messageArea">
+                            <p class="cardHead">
+                                Message
+                            </p>
+                            <textarea class="message" cols="30" id="message" name="message" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="submit" id="w-c-s-bgc_p-1-dm-id-4">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+    <script>
+        document.getElementById('izml').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get input values
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            // Check if all fields are filled
+            if (fullName === '' || email === '' || message === '') {
+                alert('Please fill in all the fields.');
+            } else {
+                alert('Your message has been sent successfully!');
+            }
+        });
+    
+        </script>
+    
+</body>
+</html>
