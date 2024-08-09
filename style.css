@@ -117,18 +117,18 @@ nav.scrolled {
 }
 
 nav .logo {
-    height: 30px;
+    height: 0px;
     position: relative;
     bottom: 50px;
 }
 
 nav .logo img {
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
 }
 
 nav ul {
-    width: 90%;
+    width: 85%;
     display: flex;
     justify-content: flex-end;
     gap: 50px;
