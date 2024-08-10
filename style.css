@@ -383,7 +383,8 @@ h3 {
         height: auto;
     }
     .container:nth-child(3){
-        height: 50vh ;
+        height: 70vh ;
+        margin-left: 40px;
     }
     .box {
         width: 90%;
@@ -420,7 +421,7 @@ h3 {
         margin-top: 5%;
     }
     .box {
-        width: 100%;
+        width: 100% !important;
         margin-top: 5%;
         padding-left: 3%;
     }
@@ -474,7 +475,7 @@ h3 {
     .box {
         width: 100%;
         margin-top: 5%;
-        margin-left: 4%;
+        /* margin-left: 4%; */
     }
 
     
@@ -591,6 +592,7 @@ h3 {
 	float: left;
 	padding: 110px 0px 110px 0px;
     height: 140vh;
+    margin: auto;
 }
 .service-list:hover{
     background-color: #0E8388;
@@ -616,7 +618,7 @@ h3 {
 
 
 .service-list h3 {
-	font-size: 28px;
+	font-size: 21px;
 	margin-top: 8px;
 	margin-bottom: 15px;
 }
@@ -624,6 +626,7 @@ h3 {
 .service-list p {
 	font-size: 15px;
 	line-height: 25px;
+    padding-top: 20px;
 }
 .main-section {
   padding: 20px;
