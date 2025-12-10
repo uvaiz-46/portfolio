@@ -475,10 +475,7 @@ h3 {
     .box {
         width: 100%;
         margin-top: 5%;
-        /* margin-left: 4%; */
     }
-
-    
 
     .container h1,
     .container h2,
@@ -529,9 +526,8 @@ h3 {
     font-size: 22px;
     font-weight: 200;
     margin-left: 30px;
-    
+    line-height: 1.6;
 }
-
 
 @media (max-width: 768px) {
     .parent {
@@ -545,7 +541,6 @@ h3 {
         width: 100%;
         height: 40v;
     }
-   
 }
 
 .progress-bar-wrap {
@@ -570,12 +565,6 @@ h3 {
 
 #kil {
     margin-top: 30px;
-}
-
-#hol{
- text-align: center;
- font-size: 40px;
-
 }
 
 .heading-text{
@@ -637,19 +626,17 @@ h3 {
   margin-bottom: 20px;
 }
 .port{
-    height: 140vh;
-    width: 100%;
+    height: auto !important;
 }
 .port1{
-    height: 190vh;
-    width: 100%;
+    height: auto !important;
 }
 
 .portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
-   height:180vh;
+   height:auto !important;
     padding: 2rem 1rem;
   }
   
@@ -847,225 +834,208 @@ h3 {
     }
   }
   
-  
  
   @media (max-width: 1100px) {
     .port{
-        height: 296vh;
+        height: auto !important;
     }
     .port1{
-        height: 220vh;
+        height: auto !important;
     }
       }
   @media (max-width: 1028px) {
     .port{
-        height:150vh;
+        height:auto !important;
     }
     .port1{
-        height: 220vh;
+        height: auto !important;
     }
       }
       @media (max-width:1000px) {
         .port{
-            height: 300vh;
+            height: auto !important;
         }
         .port1{
-            height: 250vh;
+            height: auto !important;
         }
         
       }
       @media (max-width: 935px) {
         .port1 {
-            height: 312vh;
+            height: auto !important;
         }
     }
       @media(max-width:623px){
         .port1{
-            height: 600vh;
+            height: auto !important;
         }
       }
       @media(max-width:500px){
         .port{
-            height: 310vh;
+            height: auto !important;
         }
         .port1{
-            height: 600vh;
+            height: auto !important;
         }
       }
       @media(max-width:450px){
         .port{
-            height: 325vh;
+            height: auto !important;
         }
       }
       @media(max-width:400px){
         .port{
-            height: 230vh;
+            height: auto !important;
         }
         .port1{
-            height: 230vh;
+            height: auto !important;
         }
       }
       @media(max-width:375px){
         .port{
-            height: 310vh;
+            height: auto !important;
         }
         .port1{
-            height: 390vh;
+            height: auto !important;
         }
       }
-    
-      
- 
-
 
  
 #contact {
-    height: 70vh; 
+    height: auto;
+    min-height: 100vh;
+    padding: 140px 20px 100px;
+    background: #000;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: left;
     overflow: hidden; 
 }
 
-.contact-container {
-    max-width: 1000px;
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    flex-direction: column; 
-}
-.contact-left{
-    margin-bottom: 90px;
-}
-.contact-left, .contact-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-title {
-    font-size: 36px;
-    margin-bottom: 20px;
+#contact .contact-main-title {
+    font-size: 42px;
     color: #0E8388;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
-.contact-info {
+#contact .contact-grid {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-left h3 {
+    font-size: 32px;
+    color: #0E8388;
+    margin-bottom: 24px;
+}
+
+.contact-left p {
     font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff2f2;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 30px;
 }
 
-.contact-about {
-    list-style-type: none;
-    padding-left: 10px;
-}
-.contact-about li{
-    margin-top: 20px;
-}
-.contact-subtitle {  
-    font-size: 24px;
+.contact-info-item {
     margin-bottom: 20px;
-    color: #0a9e97;
 }
 
-.contact-description {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #cfcece;
+.contact-info-item p:first-child {
+    color: #0E8388;
+    font-weight: bold;
 }
 
-.contact-button {
+.whatsapp-btn {
     display: inline-block;
-    font-size: 18px;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #02534f;
+    background: #0E8388;
+    color: #000;
+    padding: 14px 32px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #0bb8b8;
+}
+
+.contact-right {
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #0E8388;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 16px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-right label {
+    color: #0E8388;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-right button {
+    width: 100%;
+    background: #0E8388;
+    color: #000;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
-    align-self: start; 
 }
 
-.contact-button:hover {
-    background-color: #047386;
+.contact-right button:hover {
+    background: #0bb8b8;
 }
 
-
-@media (min-width: 769px) {
-    .contact-container {
-        flex-direction: row; 
-    }
-
-    .contact-left, .contact-right {
-        flex: 1;
-        min-width: 50%; 
-    }
-}
-
-@media (max-width: 768px) {
-    #contact {
-        height: 108vh; 
-        padding: 0px 0;
-        margin-top: 90px;
-    }
-#contactChatButton{
-    margin: auto;
-}
-    .contact-container {
-        align-items: center;
-        text-align: center;
-        margin-bottom: 62px;
-    }
-
-    .contact-left, .contact-right {
-        min-width: 100%;
-    }
-
-    .contact-info, .contact-subtitle, .contact-description {
+@media (max-width: 868px) {
+    #contact .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
         text-align: center;
     }
-}
-@media (max-width: 450px) {
-    body{
-        width: 100%;
-        margin: auto;
+    #contact .contact-main-title {
+        font-size: 36px;
+        margin-bottom: 60px;
     }
     #contact {
-        height: 130vh;
-       
+        padding: 100px 20px;
     }
-    #contactChatButton{
-        margin: auto;
-    }
-    
+}
 
-    .contact-container {
-   padding-top: 100px;
-}
-}
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     #contact {
-        height: 150vh;
-        margin-top: 990px;
-        padding: 20px 0; 
-        
+        padding: 80px 15px;
     }
-    #contactChatButton{
-        margin: auto;
+    #contact .contact-main-title {
+        font-size: 32px;
     }
-    
+}
 
-    .contact-container {
-   padding-top: 100px;
-}
-}
 footer {
     background: #111;
     color: #fff;
-    padding: 20px 0;
+    padding: 60px 20px;
     text-align: center;
 }
 footer .social-icons {
@@ -1074,12 +1044,12 @@ footer .social-icons {
 footer .social-icons a {
     color: #fff;
     font-size: 30px;
-    margin: 0 10px;
+    margin: 0 15px;
     display: inline-block;
     transition: color 0.3s;
 }
 footer .social-icons a:hover {
-    color: crimson;
+    color: #0E8388;
 }
 footer p {
     margin: 10px 0 0;
@@ -1095,10 +1065,3 @@ footer p {
         margin: 5px;
     }
 }
-
-
-
-
-
-
-
